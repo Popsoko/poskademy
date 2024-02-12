@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/static/images/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Set the height equal to width to make it circular */
+    border-radius: 50%; /* Make it circular */
+    background-image: url('logo.png'); /* Add your logo image */
+    background-size: cover; /* Ensure the logo covers the entire div */
+    z-index: 1000;
+    top: 20px; /* Adjust top position */
+    left: 20px; /* Adjust left position */
+}
+
+
+        .btn-custom {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <div class="logo">
+        <img src="/static/images/logo.png" alt="Logo" width="200">
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

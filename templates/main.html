@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body style="background-image: url('background-image.jpg');"> <!-- Added background image -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-facebook fixed-top"> <!-- Added bg-facebook class for Facebook blue -->
+        <div class="container">
+            <a class="navbar-brand" href="#">Polskademy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto"> <!-- Align navbar items to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('universities') }}">Universities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5"> <!-- Added margin-top to give space below navbar -->
+        <h1>Welcome to Polskademy</h1>
+        <h2>Your gateway to Europe</h2>
+        <p>
+            Studying in Poland offers an exciting and enriching experience for students from 
+            all around the world. With its vibrant culture, rich history, and welcoming atmosphere, 
+            Poland provides an ideal environment for academic growth and personal development. 
+            The country boasts a diverse range of universities and colleges, offering high-quality 
+            education across various fields of study. Additionally, Poland's affordable tuition fees
+             and cost of living make it an attractive 
+            destination for international students seeking quality education without breaking the bank</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Welcome to the Admin Page</h1>
+        
+        <!-- Form to add a new university -->
+        <div class="mt-5">
+            <h2>Add a New University</h2>
+            <form action="{{ url_for('add_university') }}" method="POST">
+                <div class="form-group">
+                    <label for="name">University Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" class="form-control" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="ranking">Ranking:</label>
+                    <input type="number" class="form-control" id="ranking" name="ranking" required>
+                </div>
+                <div class="form-group">
+                    <label for="picture_url">Picture URL:</label>
+                    <input type="text" class="form-control" id="picture_url" name="picture_url" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add University</button>
+            </form>
+        </div>
+        
+        <!-- Form to add a new course for a university -->
+        <div class="mt-5">
+            <h2>Add a Course for a University</h2>
+            <form action="{{ url_for('add_course') }}" method="POST">
+                <div class="form-group">
+                    <label for="university_id">Select University:</label>
+                    <select class="form-control" id="university_id" name="university_id">
+                        {% for university in universities %}
+                            <option value="{{ university.id }}">{{ university.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="course_name">Course Name:</label>
+                    <input type="text" class="form-control" id="course_name" name="course_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration_semesters">Duration (in semesters):</label>
+                    <input type="number" class="form-control" id="duration_semesters" name="duration_semesters" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" name="description" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Course</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

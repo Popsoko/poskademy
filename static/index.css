@@ -1,0 +1,90 @@
+body {
+    background-image: url('colour.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Display content in a column */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Position relative for absolute positioning of logo */
+}
+
+.container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px; /* Adjust the size as needed */
+    width: auto;
+    height: auto;
+    border-radius: 50%; /* Make it circular */
+    position: absolute;
+    top: 20px; /* Adjust top position */
+    left: 20px; /* Adjust left position */
+    z-index: 1000; /* Ensure the logo is above other content */
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade of blue */
+}
+
+nav {
+    background-color: #f7b4b4;
+    overflow: hidden;
+    width: 100%; /* Ensure navigation bar spans the full width */
+}
+
+nav a {
+    display: inline-block; /* Display links horizontally */
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Additional styling for colorful navbar */
+.nav-link1 {
+    background-color: red;
+}
+
+.nav-link2 {
+    background-color: yellow;
+}
+.bg-facebook {
+    background-color: #3b5998 !important; /* Facebook blue color */
+}
+
+.container {
+    color: rgb(18, 18, 18); /* Text color for better contrast on the background */
+}

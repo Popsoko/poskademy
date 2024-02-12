@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Polskademy</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+   
+    <div class="btn-container">
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Create Account</a>
+        <span> or </span>
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+    </div>
+    <div class="background-container">
+        <div class="container">
+           
+            <h1>Welcome to Polskademy</h1>
+            <p class="subtitle">Your gateway to Polish universities. Thinking about studying in Europe , well at Polskademy Application
+                process has been simplified.Its as easy as ABC. 
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>

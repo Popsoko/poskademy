@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universities</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles can be added here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>List of Universities</h1>
+        <div class="row">
+            {% for university in universities %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ university['picture_url'] }}" class="card-img-top" alt="{{ university['name'] }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ university['name'] }}</h5>
+                        <p class="card-text">Location: {{ university['location'] }}</p>
+                        <p class="card-text">Ranking: {{ university['ranking'] }}</p>
+                        <p class="card-text">{{ university['description'] }}</p>
+                        <!-- Button to view courses -->
+                        <form action="{{ url_for('courses', university_id=university['id']) }}" method="GET">
+                            <button type="submit" class="btn btn-primary">View Courses</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

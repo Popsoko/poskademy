@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-container {
+    background-image: url('.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    color: #fff; /* Set text color to white */
+    padding: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em; /* Increase font size */
+}
+
+.subtitle {
+    font-size: 1.5em; /* Set subtitle font size */
+    margin-bottom: 30px; /* Add more spacing */
+}
+
+.btn-container {
+    margin-top: 20px; /* Add space between subtitle and buttons */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
